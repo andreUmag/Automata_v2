@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000000;
+  font-family: "Poppins", sans-serif;
+}
+
+/*---------------------------menu-------------------------------------*/
+
+.nav {
+  width: 210px;
+}
+
+.nav_link {
+  color: #303440;
+  display: block;
+  padding: 15px 0;
+  text-decoration: none;
+}
+
+.nav_link--inside {
+  border-radius: 6px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.nav_link--inside:hover {
+  background: #f6f8fa;
+}
+
+.list {
+  width: 210px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0 16px 16px 0;
+  background: #fff;
+}
+
+.list_item {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.list_item--click {
+  cursor: pointer;
+}
+
+.list_button {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.arrow .list_arrow {
+  transform: rotate(90deg);
+}
+
+.list_arrow {
+  margin-left: auto;
+  transition: transform 0.3s;
+}
+
+.list_show {
+  width: 80%;
+  margin-left: auto;
+  border-left: 2px solid #303440;
+  list-style: none;
+  transition: height 0.4s;
+  height: 0;
+}
+
+/*---------------------------cuerpo-------------------------------------*/
+
+.content {
+  flex-grow: 1; /* Ocupa todo el espacio disponible en el contenedor */
+  height: 100vh; /* Alto igual al alto de la ventana */
+  align-items: center;
+}
+
+.container {
+  display: flex;
+}
+
+.title {
+  display: grid;
+  justify-content: center;
+  margin: 20px 0 0 0;
+  color: #fff;
+}
+
+.graf_content {
+  display: flex;
+  background-color: #030303;
+  width: 97.5%;
+  height: 400px;
+  margin: 20px 20px 20px 20px;
+  border-radius: 16px;
+}
+
+.graf_espace {
+  display: flex;
+  background-color: #222;
+  width: 97.5%;
+  height: 89.5%;
+  margin: 20px 10px 20px 20px;
+  border-radius: 8px;
+}
+
+.velocity {
+  align-items: center;
+}
+
+.line_velocity {
+  display: flex;
+  background-color: #222;
+  width: 50px;
+  height: 300px;
+  margin: 20px 20px 10px 0;
+  border-radius: 30px;
+}
+
+.velocity_icon {
+  display: flex;
+  width: 20px;
+  height: 50px;
+}
+
+.run_icon {
+  transform: scale(0.7);
+  filter: invert(100%);
+}
+
+/*---------------------------ingresar-------------------------------------*/
+
+.in {
+  display: grid;
+  justify-content: center;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field input {
+  width: 350px;
+  height: 60px;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 15px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 19px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-field input:focus ~ label {
+  top: 0;
+  left: 15px;
+  font-size: 16px;
+  padding: 0 2px;
+  background: #000000;
+}
