@@ -100,7 +100,7 @@ body {
 }
 
 .graf_content {
-  display: flex;
+  align-items: center;
   background-color: #030303;
   width: 97.5%;
   height: 400px;
@@ -108,25 +108,17 @@ body {
   border-radius: 16px;
 }
 
-.graf_espace {
-  display: flex;
-  background-color: #222;
-  width: 97.5%;
-  height: 89.5%;
-  margin: 20px 10px 20px 20px;
-  border-radius: 8px;
-}
-
 .velocity {
-  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .line_velocity {
   display: flex;
-  background-color: #222;
-  width: 50px;
-  height: 300px;
-  margin: 20px 20px 10px 0;
+  background-color: #6b6b6b;
+  width: 300px;
+  height: 30px;
+  margin: 10px 20px 10px 0;
   border-radius: 30px;
 }
 
@@ -139,6 +131,15 @@ body {
 .run_icon {
   transform: scale(0.7);
   filter: invert(100%);
+}
+
+.graf{
+  display: flex;
+  background-color: #020202;
+  width: 97.5%;
+  height: 83.5%;
+  margin: 0 15px 15px 15px;
+  border-radius: 10px;
 }
 
 /*---------------------------ingresar-------------------------------------*/
@@ -182,3 +183,5 @@ body {
   padding: 0 2px;
   background: #000000;
 }
+
+
