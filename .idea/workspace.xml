@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38994560-79d7-459c-b9f3-072266cc618f" name="Changes" comment="" />
+    <list default="true" id="38994560-79d7-459c-b9f3-072266cc618f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,9 +16,12 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2WBProrQ9ujQxu3ANgiURrF3B5A" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,6 +32,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Andre/OneDrive/Documentos/EDUTIN_DOCUMENTS/EDUTIN_REPORSITORY",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -56,6 +63,8 @@
       <option name="presentableId" value="Default" />
       <updated>1696203202149</updated>
       <workItem from="1696203233742" duration="32000" />
+      <workItem from="1696289291575" duration="19000" />
+      <workItem from="1696428869672" duration="74000" />
     </task>
     <servers />
   </component>
