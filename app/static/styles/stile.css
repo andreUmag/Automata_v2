@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #000000;
+  /* background: #000000; */
   font-family: "Poppins", sans-serif;
 }
 
@@ -20,6 +20,23 @@ body {
 .container {
   display: flex;
   align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(40deg,#534d83, #6d376e, #50466d, #D0CCED, #23d5ab, #8f673d);
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
 }
 
 .title {
@@ -32,7 +49,7 @@ body {
 .graf_content {
   display: block;
   align-items: center;
-  background-color: #030303;
+  /* background-color: #030303; */
   width: 1100px;
   height: 400px;
   margin: 20px 20px 20px 20px;

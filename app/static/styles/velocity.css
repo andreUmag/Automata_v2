@@ -19,7 +19,7 @@
     height: 35px;
     width: 320px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 0 65px 0 45px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -55,7 +55,7 @@
     content: "";
     height: 100%;
     width: 100%;
-    background: #000000;
+    background: linear-gradient(40deg, #3800d2, #000000, #f42121);
     border: 3px solid #fff;
     z-index: -1;
     left: 50%;
@@ -106,8 +106,8 @@
     height: 20px;
     background: red;
     border-radius: 50%;
-    background: #000000;
-    border: 1px solid #000000;
+    background: #ffffff;
+    border: 1px solid #a3a3a3;
     cursor: pointer;
   }
   
