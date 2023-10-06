@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Automata</title>
-    <link rel="stylesheet" href="styles/stile.css" />
-    <link rel="stylesheet" href="styles/menu.css" />
-    <link rel="stylesheet" href="styles/velocity.css" />
-    <link rel="stylesheet" href="styles/input.css" />
-    <link rel="icon" href="assets/graphql-logo-24.ico" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stile.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/menu.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/velocity.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/input.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='assets/graphql-logo-24.ico') }}" />
   </head>
   <body>
     <div class="container">
@@ -16,16 +16,16 @@
         <ul class="list">
           <li class="list_item">
             <div class="list_button">
-              <img src="assets/bx-history.svg" class="list_img" />
+              <img src="{{ url_for('static', filename='assets/bx-history.svg') }}" class="list_img" />
               <a href="#" class="nav_link">Historial</a>
             </div>
           </li>
 
           <li class="list_item list_item--click">
             <div class="list_button list_button--click">
-              <img src="assets/bxs-pencil.svg" class="list_img" />
+              <img src="{{ url_for('static', filename='assets/bxs-pencil.svg') }}" class="list_img" />
               <a href="#" class="nav_link">Idiomas</a>
-              <img src="assets/bxs-right-arrow.svg" class="list_arrow" />
+              <img src="{{ url_for('static', filename='assets/bxs-right-arrow.svg') }}" class="list_arrow" />
             </div>
 
             <ul class="list_show">
@@ -69,12 +69,12 @@
             <label>Palabra</label>
           </div>
           <div class="buttondiv">
-            <button type="button" class="button"><img src="assets/bx-send.svg" class="send-word"></button>
+            <button type="button" class="button"><img src="{{ url_for('static', filename='assets/bx-send.svg') }}" class="send-word"></button>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="scripts/acrtions.js"></script>
+    <script src="{{ url_for('static', filename='scripts/acrtions.js') }}"></script>
   </body>
 </html>
