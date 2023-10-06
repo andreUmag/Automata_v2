@@ -60,21 +60,26 @@
             </div>
           </div>
 
-          <div class="graf"></div>
+          <div class="graf">
+            {% include 'graf.html' %}
+          </div>
+
+          <div class="in">
+            <div class="input-field">
+              <input type="text" required />
+              <label>Palabra</label>
+            </div>
+            <div class="buttondiv">
+              <button type="button" class="button"><img src="{{ url_for('static', filename='assets/bx-send.svg') }}" class="send-word"></button>
+            </div>
+          </div>
+
         </div>
 
-        <div class="in">
-          <div class="input-field">
-            <input type="text" required />
-            <label>Palabra</label>
-          </div>
-          <div class="buttondiv">
-            <button type="button" class="button"><img src="{{ url_for('static', filename='assets/bx-send.svg') }}" class="send-word"></button>
-          </div>
-        </div>
+        
+
+        <script src="{{ url_for('static', filename='scripts/acrtions.js') }}"></script>
       </div>
     </div>
-
-    <script src="{{ url_for('static', filename='scripts/acrtions.js') }}"></script>
   </body>
 </html>
