@@ -1,3 +1,4 @@
+// seccion para el funcionamiento del menu lateral
 let listelement = document.querySelectorAll(".list_button--click");
 
 listelement.forEach((listelement) => {
@@ -14,6 +15,7 @@ listelement.forEach((listelement) => {
   });
 });
 
+// seccion para el funcionamiento del slider de velocidad
 const slideValue = document.querySelector("span");
 const inputSlider = document.querySelector("input");
 inputSlider.oninput = () => {
@@ -26,6 +28,8 @@ inputSlider.onblur = () => {
   slideValue.classList.remove("show");
 };
 
+
+// seccion para elfuncionamiento de la entrada de palabras y mostrar las palabras en la lista del menu
 document.addEventListener("DOMContentLoaded", function () {
   const inputField = document.getElementById("input-word");
   const addButton = document.getElementById("add-word-button");
