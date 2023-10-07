@@ -1,53 +1,53 @@
 /*---------------------------ingresar-------------------------------------*/
 
 .in {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .input-field {
-    position: relative;
-  }
-  
-  .input-field input {
-    width: 350px;
-    height: 60px;
-    border-radius: 6px;
-    font-size: 18px;
-    padding: 0 15px;
-    border: 2px solid #fff;
-    background: transparent;
-    color: #fff;
-    outline: none;
-  }
-  
-  .input-field label {
-    position: absolute;
-    top: 57%;
-    left: 15%;
-    transform: translateY(-85%);
-    color: #fff;
-    font-size: 19px;
-    pointer-events: none;
-    transition: 0.3s;
-  }
-  
-  .input-field input:focus ~ label {
-    top: 0;
-    left: 15px;
-    font-size: 16px;
-    padding: 0 5px;
-    /* background: #000000; */
-  }
+  display: flex;
+  justify-content: center;
+}
 
-  .button{
-    background-color: rgba(99, 99, 99, 0);
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-  }
+.input-field {
+  position: relative;
+}
 
-  .send-word{
-    filter: invert(100%);
-    transform: scale(1.2);
-  }
+.input-field input {
+  width: 350px;
+  height: 60px;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 15px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+
+.input-field label {
+  position: absolute;
+  top: 57%;
+  left: 15%;
+  transform: translateY(-85%);
+  color: #fff;
+  font-size: 19px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-field input:focus ~ label {
+  top: 0;
+  left: 15px;
+  font-size: 16px;
+  padding: 0 5px;
+  /* background: #000000; */
+}
+
+.button {
+  background-color: rgba(99, 99, 99, 0);
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+.send-word {
+  filter: invert(100%);
+  transform: scale(1.2);
+}

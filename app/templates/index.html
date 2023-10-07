@@ -4,11 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Automata</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stile.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/menu.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/velocity.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/input.css') }}" />
-    <link rel="icon" href="{{ url_for('static', filename='assets/graphql-logo-24.ico') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/stile.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/menu.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/velocity.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/input.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='assets/graphql-logo-24.ico') }}"
+    />
   </head>
   <body>
     <div class="container">
@@ -16,34 +31,83 @@
         <ul class="list">
           <li class="list_item list_item--click">
             <div class="list_button list_button--click">
-              <img src="{{ url_for('static', filename='assets/bx-history.svg') }}" class="list_img" style="filter: invert(100%);"/>
-              <a href="#" class="nav_link" style="color: white;" data-translate="historial">Historial</a>
-              <img src="{{ url_for('static', filename='assets/bxs-right-arrow.svg') }}" class="list_arrow" style="filter: invert(100%);" />
+              <img
+                src="{{ url_for('static', filename='assets/bx-history.svg') }}"
+                class="list_img"
+                style="filter: invert(100%)"
+              />
+              <a
+                href="#"
+                class="nav_link"
+                style="color: white"
+                data-translate="historial"
+                >Historial</a
+              >
+              <img
+                src="{{ url_for('static', filename='assets/bxs-right-arrow.svg') }}"
+                class="list_arrow"
+                style="filter: invert(100%)"
+              />
             </div>
             <div class="historial list_show list_inside">
-              <ul id="word-list" style="color: #00ff00; list-style-type: none; margin-left: 20px; padding: 0; text-align: left;">
+              <ul
+                id="word-list"
+                style="
+                  color: #00ff00;
+                  list-style-type: none;
+                  margin-left: 20px;
+                  padding: 0;
+                  text-align: left;
+                "
+              >
                 <!-- Los elementos de la lista se agregarán aquí -->
               </ul>
             </div>
           </li>
 
-
           <li class="list_item list_item--click">
             <div class="list_button list_button--click">
-              <img src="{{ url_for('static', filename='assets/bxs-pencil.svg') }}" class="list_img" style="filter: invert(100%);"/>
-              <a href="#" class="nav_link" style="color: white;" data-translate="idiomas">Idiomas</a>
-              <img src="{{ url_for('static', filename='assets/bxs-right-arrow.svg') }}" class="list_arrow" style="filter: invert(100%);" />
+              <img
+                src="{{ url_for('static', filename='assets/bxs-pencil.svg') }}"
+                class="list_img"
+                style="filter: invert(100%)"
+              />
+              <a
+                href="#"
+                class="nav_link"
+                style="color: white"
+                data-translate="idiomas"
+                >Idiomas</a
+              >
+              <img
+                src="{{ url_for('static', filename='assets/bxs-right-arrow.svg') }}"
+                class="list_arrow"
+                style="filter: invert(100%)"
+              />
             </div>
 
             <ul class="list_show">
               <li class="list_inside">
-                <a href="#" class="nav_link nav_link--inside" style="color: white;" id="flags" data-translate="espanol">Español</a>
+                <a
+                  href="#"
+                  class="nav_link nav_link--inside"
+                  style="color: white"
+                  id="flags"
+                  data-translate="espanol"
+                  >Español</a
+                >
               </li>
 
               <li class="list_inside">
-                <a href="#" class="nav_link nav_link--inside"style="color: white;" id="flags" data-translate="ingles">Ingles</a>
+                <a
+                  href="#"
+                  class="nav_link nav_link--inside"
+                  style="color: white"
+                  id="flags"
+                  data-translate="ingles"
+                  >Ingles</a
+                >
               </li>
-              
             </ul>
           </li>
         </ul>
@@ -63,15 +127,13 @@
               </div>
               <div class="field">
                 <div class="value left">10</div>
-                  <input type="range" min="10" max="100" value="50" steps="1" />
+                <input type="range" min="10" max="100" value="50" steps="1" />
                 <div class="value right">100</div>
               </div>
             </div>
           </div>
 
-          <div class="graf">
-            {% include 'graf.html' %}
-          </div>
+          <div class="graf">{% include 'graf.html' %}</div>
 
           <form class="in">
             <div class="input-field">
@@ -80,17 +142,18 @@
             </div>
             <div class="buttondiv">
               <button type="submit" id="add-word-button" class="button">
-                <img src="{{ url_for('static', filename='assets/bx-send.svg') }}" class="send-word">
-              </button>            
+                <img
+                  src="{{ url_for('static', filename='assets/bx-send.svg') }}"
+                  class="send-word"
+                />
+              </button>
             </div>
           </form>
-
         </div>
 
         <script src="{{ url_for('static', filename='scripts/translations.js') }}"></script>
         <script src="{{ url_for('static', filename='scripts/acrtions.js') }}"></script>
       </div>
-
     </div>
   </body>
 </html>

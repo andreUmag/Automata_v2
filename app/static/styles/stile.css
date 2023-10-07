@@ -12,8 +12,8 @@ body {
 
 .content {
   display: block;
-  flex-grow: 1; 
-  height: 100vh; 
+  flex-grow: 1;
+  height: 100vh;
   align-items: center;
 }
 
@@ -23,19 +23,27 @@ body {
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(40deg,#534d83, #194927, #50466d, #D0CCED, #23d5ab, #8f673d);
+  background: linear-gradient(
+    40deg,
+    #534d83,
+    #194927,
+    #50466d,
+    #d0cced,
+    #23d5ab,
+    #8f673d
+  );
   background-size: 300% 300%;
   animation: color 12s ease-in-out infinite;
 }
 
-@keyframes color{
-  0%{
+@keyframes color {
+  0% {
     background-position: 0 50%;
   }
-  50%{
+  50% {
     background-position: 100 50%;
   }
-  100%{
+  100% {
     background-position: 0 50%;
   }
 }
@@ -66,6 +74,3 @@ body {
   margin: 5px 15px 15px 15px;
   border-radius: 10px;
 }
-
-
-

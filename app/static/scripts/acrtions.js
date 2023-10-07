@@ -26,12 +26,12 @@ inputSlider.onblur = () => {
   slideValue.classList.remove("show");
 };
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const inputField = document.getElementById("input-word");
   const addButton = document.getElementById("add-word-button");
   const wordList = document.getElementById("word-list");
 
-  addButton.addEventListener("click", function(event) {
+  addButton.addEventListener("click", function (event) {
     event.preventDefault();
 
     const inputValue = inputField.value.trim();
@@ -50,7 +50,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
-
-
-
-
