@@ -55,7 +55,7 @@
     content: "";
     height: 100%;
     width: 100%;
-    background: linear-gradient(40deg, #3800d2, #000000, #f42121);
+    background: linear-gradient(40deg, #3800d2, #5e7268, #f42121);
     border: 3px solid #fff;
     z-index: -1;
     left: 50%;

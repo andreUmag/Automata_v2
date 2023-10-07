@@ -1,7 +1,7 @@
 /*---------------------------menu-------------------------------------*/
 
 .nav {
-    width: 210px;
+    width: 250px;
     color: rgb(255, 255, 255);
   }
   
@@ -26,7 +26,7 @@
   }
   
   .list {
-    width: 210px;
+    width: 220px;
     height: 100vh;
     display: flex;
     justify-content: center;
