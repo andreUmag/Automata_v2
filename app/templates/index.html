@@ -17,7 +17,12 @@
           <li class="list_item">
             <div class="list_button">
               <img src="{{ url_for('static', filename='assets/bx-history.svg') }}" class="list_img" style="filter: invert(100%);"/>
-              <a href="#" class="nav_link" style="color: white;">Historial</a>
+              <a href="#" class="nav_link" style="color: white;">Historial</a> 
+              <div class="historial">
+                <ul id="word-list">
+                  <!-- Los elementos de la lista se agregarán aquí -->
+                </ul>
+              </div>
             </div>
           </li>
 
@@ -36,6 +41,7 @@
               <li class="list_inside">
                 <a href="#" class="nav_link nav_link--inside"style="color: white;"">Ingles</a>
               </li>
+              
             </ul>
           </li>
         </ul>
@@ -48,13 +54,14 @@
 
         <div class="graf_content">
           <div class="velocity">
+            <!-- <div class="Velocity_text">Velocidad</div> -->
             <div class="range">
               <div class="sliderValue">
                 <span>100</span>
               </div>
               <div class="field">
                 <div class="value left">10</div>
-                <input type="range" min="10" max="100" value="50" steps="1" />
+                  <input type="range" min="10" max="100" value="50" steps="1" />
                 <div class="value right">100</div>
               </div>
             </div>
@@ -64,20 +71,21 @@
             {% include 'graf.html' %}
           </div>
 
-          <div class="in">
+          <form class="in">
             <div class="input-field">
-              <input type="text" required />
+              <input type="text" id="input-word" required />
               <label>Palabra</label>
             </div>
             <div class="buttondiv">
-              <button type="button" class="button"><img src="{{ url_for('static', filename='assets/bx-send.svg') }}" class="send-word"></button>
+              <button type="submit" id="add-word-button" class="button">
+                <img src="{{ url_for('static', filename='assets/bx-send.svg') }}" class="send-word">
+              </button>            
             </div>
-          </div>
+          </form>
 
         </div>
 
         
-
         <script src="{{ url_for('static', filename='scripts/acrtions.js') }}"></script>
       </div>
     </div>

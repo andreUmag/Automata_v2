@@ -22,7 +22,7 @@ body {
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(40deg,#534d83, #6d376e, #50466d, #D0CCED, #23d5ab, #8f673d);
+  background: linear-gradient(40deg,#534d83, #194927, #50466d, #D0CCED, #23d5ab, #8f673d);
   background-size: 300% 300%;
   animation: color 12s ease-in-out infinite;
 }

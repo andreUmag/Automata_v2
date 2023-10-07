@@ -41,7 +41,7 @@
   }
 
   .button{
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(99, 99, 99, 0);
     border: none;
     padding: 10px 20px;
     margin: 10px;
