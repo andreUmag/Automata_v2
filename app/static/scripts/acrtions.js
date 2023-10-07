@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
       listItem.textContent = inputValue;
 
       if (wordList.children.length >= 5) {
-        wordList.removeChild(wordList.children[0]);
+        wordList.removeChild(wordList.lastChild);
       }
 
-      wordList.appendChild(listItem);
+      wordList.insertBefore(listItem, wordList.firstChild);
 
       inputField.value = "";
     }
