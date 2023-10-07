@@ -37,7 +37,6 @@ const translations = {
     });
   }
   
-  //cambio de idioma cuando se hace clic en los enlaces de idioma
   document.querySelectorAll('.nav_link--inside').forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();

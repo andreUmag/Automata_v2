@@ -14,17 +14,19 @@
     <div class="container">
       <nav class="nav">
         <ul class="list">
-          <li class="list_item">
-            <div class="list_button">
+          <li class="list_item list_item--click">
+            <div class="list_button list_button--click">
               <img src="{{ url_for('static', filename='assets/bx-history.svg') }}" class="list_img" style="filter: invert(100%);"/>
-              <a href="#" class="nav_link" style="color: white;" data-translate="historial">Historial</a> 
-              <div class="historial">
-                <ul id="word-list">
-                  <!-- Los elementos de la lista se agregarán aquí -->
-                </ul>
-              </div>
+              <a href="#" class="nav_link" style="color: white;" data-translate="historial">Historial</a>
+              <img src="{{ url_for('static', filename='assets/bxs-right-arrow.svg') }}" class="list_arrow" style="filter: invert(100%);" />
+            </div>
+            <div class="historial list_show list_inside">
+              <ul id="word-list" style="color: #00ff00; list-style-type: none; margin-left: 20px; padding: 0; text-align: left;">
+                <!-- Los elementos de la lista se agregarán aquí -->
+              </ul>
             </div>
           </li>
+
 
           <li class="list_item list_item--click">
             <div class="list_button list_button--click">
@@ -88,6 +90,7 @@
         <script src="{{ url_for('static', filename='scripts/translations.js') }}"></script>
         <script src="{{ url_for('static', filename='scripts/acrtions.js') }}"></script>
       </div>
+
     </div>
   </body>
 </html>
