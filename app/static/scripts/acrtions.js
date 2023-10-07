@@ -31,10 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const addButton = document.getElementById("add-word-button");
   const wordList = document.getElementById("word-list");
 
-  console.log(inputField); // Verifica si inputField es null
-  console.log(addButton); // Verifica si addButton es null
-  console.log(wordList);  // Verifica si wordList es null
-
   addButton.addEventListener("click", function(event) {
     event.preventDefault();
 
@@ -43,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
     if (inputValue !== "") {
       const listItem = document.createElement("li");
       listItem.textContent = inputValue;
+
+      if (wordList.children.length >= 5) {
+        wordList.removeChild(wordList.children[0]);
+      }
 
       wordList.appendChild(listItem);
 
