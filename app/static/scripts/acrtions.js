@@ -40,7 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const inputValue = inputField.value.trim();
 
-    if (inputValue !== "") {
+    const regex = /^[abAB]+$/;
+
+    if (regex.test(inputValue)) {
       const listItem = document.createElement("li");
       listItem.textContent = inputValue;
 
@@ -51,6 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
       wordList.insertBefore(listItem, wordList.firstChild);
 
       inputField.value = "";
+    } else {
+      alert("La palabra solo debe contener las letras 'a' y 'b'.");
     }
   });
 });
