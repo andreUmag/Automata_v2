@@ -10,6 +10,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.supertitulo {
+  color: white;
+  text-decoration: none; 
+  font-size: 35px;
+}
+
 .content {
   display: block;
   flex-grow: 1;
