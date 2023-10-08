@@ -6,14 +6,13 @@
 }
 
 body {
-  /* background: #000000; */
   font-family: "Poppins", sans-serif;
 }
 
 .supertitulo {
   color: white;
   text-decoration: none; 
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .content {
