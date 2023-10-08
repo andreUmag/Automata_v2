@@ -18,11 +18,18 @@ listelement.forEach((listelement) => {
 // seccion para el funcionamiento del slider de velocidad
 const slideValue = document.querySelector("span");
 const inputSlider = document.querySelector("input");
+let valorInput = ""; //variable que registra el valor de la velocidad
+
+function transformarValorInput(value) {
+  // Convierte el valor de 10 a 100 a un valor entre 1 y 2
+  return 1 + (value - 10) / 90;
+}
 inputSlider.oninput = () => {
   let value = inputSlider.value;
   slideValue.textContent = value;
   slideValue.style.left = value + "%";
   slideValue.classList.add("show");
+  valorInput = transformarValorInput(value);
 };
 inputSlider.onblur = () => {
   slideValue.classList.remove("show");
