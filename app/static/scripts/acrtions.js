@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function check(){
 
-  var text = document.getElementById("input-word").value;
+  var text = document.getElementById("input-word").value.toLowerCase();
     unpaint();
     check_word(text, 0, -1);
 
@@ -100,7 +100,7 @@ function check(){
   
   function paint_node(node) {
     var shape = node.findObject("SHAPE");
-    shape.fill = "green";
+    shape.fill = "#A5D7F4";
   }
   
   function unpaint_node(node) {
@@ -109,9 +109,9 @@ function check(){
   }
   
   function paint_link(link) {
-    link.path.stroke = "green";
+    link.path.stroke = "#A5D7F4";
     var shape = link.findObject("arrow");
-    shape.fill = "green";
+    shape.fill = "#7BCAF8";
     window.setTimeout(function(){ 
       link.path.stroke = "black";
       shape.fill = "black";
