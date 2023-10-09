@@ -14,7 +14,7 @@ function init() {
             "InitialAnimationStarting": function(e) {
                 var animation = e.subject.defaultAnimation;
                 animation.easing = go.Animation.EaseOutExpo;
-                animation.duration = 900;
+                animation.duration = 1;
                 animation.add(e.diagram, 'scale', 0.1, 1);
                 animation.add(e.diagram, 'opacity', 0, 1);
             },
@@ -26,7 +26,7 @@ function init() {
             // enable undo & redo
             "undoManager.isEnabled": true,
             positionComputation: function (diagram, pt) {
-              return new go.Point(Math.floor(pt.x), Math.floor(pt.y));
+              return new go.Point(Math.floor(pt.x+20), Math.floor(pt.y));
             }
           });
 
@@ -255,7 +255,7 @@ function init() {
             new go.Binding('stroke', 'progress', progress => progress ? "black" /* green */ : 'black'),
             new go.Binding('strokeWidth', 'progress', progress => progress ? 1.5 : 1.5)),
           $(go.Shape,  // the arrowhead
-            { toArrow: "standard", stroke: null },
+            { name: "arrow",toArrow: "Standard", stroke: null },
             new go.Binding('fill', 'progress', progress => progress ? "#black" /* green */ : 'black')),
           $(go.Panel, "Auto",
             $(go.Shape,  // the label background, which becomes transparent around the edges

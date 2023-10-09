@@ -141,8 +141,8 @@
               <input type="text" id="input-word" required />
               <label data-translate="palabra">Palabra</label>
             </div>
-            <div class="buttondiv">
-              <button type="submit" id="add-word-button" class="button">
+            <div class="buttondiv" >
+              <button onclick="check()" type="submit" id="add-word-button" class="button" >
                 <img
                   src="{{ url_for('static', filename='assets/bx-send.svg') }}"
                   class="send-word"
@@ -154,6 +154,9 @@
 
         <script src="{{ url_for('static', filename='scripts/translations.js') }}"></script>
         <script src="{{ url_for('static', filename='scripts/acrtions.js') }}"></script>
+        <script>
+          
+        </script>
       </div>
     </div>
   </body>

@@ -18,11 +18,11 @@ listelement.forEach((listelement) => {
 // seccion para el funcionamiento del slider de velocidad
 const slideValue = document.querySelector("span");
 const inputSlider = document.querySelector("input");
-let valorInput = ""; //variable que registra el valor de la velocidad
+var valorInput = ""; //variable que registra el valor de la velocidad
 
 function transformarValorInput(value) {
   // Convierte el valor de 10 a 100 a un valor entre 1 y 2
-  return 1 + (value - 10) / 90;
+  return (1 + (value - 10) / 90)*1000;
 }
 inputSlider.oninput = () => {
   let value = inputSlider.value;
@@ -64,74 +64,82 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("La palabra solo debe contener las letras 'a' y 'b'.");
     }
   });
+
+
+
 });
 
 
+function check(){
 
-document.addEventListener("DOMContentLoaded", function () {
-let check = document.getElementById("add-word-button");
-
-check.onclick = function () {
   var text = document.getElementById("input-word").value;
-  var speed = document.getElementById("speed").value;
-  unpaint(myDiagram);
-  check_word(text, 0, myDiagram.findNodeForKey(0));
-
-
-}
-
-function check_word(text, index, node) {
-  window.setTimeout(function () {
-    paint_node(node);
+    unpaint();
+    check_word(text, 0, -1);
+    function check_word(text, index, keynode) {
+    node= myDiagram.findNodeForKey(keynode);
     window.setTimeout(function () {
-      if(index<text.length) {
-        let links = node.findTreeChildrenLinks();
-        let link = links.ub._dataArray.filter(function (link) {return link.data.text == text[index] && link.fromNode == node;});
-        if(link.length == 0) {
+      paint_node(node);
+      window.setTimeout(function () {
+        if(index<text.length) {
+          let links = node.findTreeChildrenLinks();
+          let link = links.ub._dataArray.filter(function (link) {return link.data.text == text[index] && link.fromNode == node;});
+          if(link.length == 0) {
           unpaint(myDiagram);
+            check_acceptance_status(node);
+          } else if(link[0].data.text == text[index]) {
+            unpaint_node(node);
+            paint_link(link[0]);
+            return check_word(text, index+1, link[0].toNode.data.id);
+          }
+        } else {
           check_acceptance_status(node);
-        } else if(link[0].data.text == text[index]) {
-          paint_link(link[0]);
-          return check_word(text, index+1, link[0].toNode.data.id);
         }
-      }
-    }, 1000);
-
-  },1000);
-
-
-}
-
-function unpaint(diagram) {
-  for(var i = 0; i <=10; i++) {
-    var node = diagram.findNodeForKey(i);
-    var shape = node.findObject("SHAPE")
+      }, 500);
+  
+    },500);
+  
+  
+  }
+  
+  function unpaint() {
+    myDiagram.model = go.Model.fromJson(document.getElementById("mySavedModel").value);
+  }
+  
+  
+  function paint_node(node) {
+    var shape = node.findObject("SHAPE");
+    shape.fill = "green";
+  }
+  
+  function unpaint_node(node) {
+    var shape = node.findObject("SHAPE");
     shape.fill = "white";
   }
-}
-
-function paint_node(node) {
-  var shape = node.findObject("SHAPE")
-  shape.fill = "green";
-}
-
-function paint_link(link) {
-  window.setTimeout(function(){ 
-    link.path.stroke = "#52ce60";
-  },1000);
-  window.setTimeout(function(){ 
-    link.path.stroke = "black";
-  },1000);
-}
-
-function check_acceptance_status(node) {
-  if(node.data.category=="accept") {
-    return true;
-  } else {
-    return false;
+  
+  function paint_link(link) {
+    link.path.stroke = "green";
+    var shape = link.findObject("arrow");
+    shape.fill = "green";
+    window.setTimeout(function(){ 
+      link.path.stroke = "black";
+      shape.fill = "black";
+    },1000);
   }
-}
+  
+  function check_acceptance_status(node) {
+    if(node.data.category=="accept") {
+      alert("Cadena aceptada");
+      return true;
+    } else {
+      alert("Cadena rechazada");
+      return false;
+    }
+  
+  
+  
+  
+  }
+  
 
+} 
 
-
-});
