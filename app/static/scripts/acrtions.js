@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
       inputField.value = "";
     } else {
       alert("La palabra solo debe contener las letras 'a' y 'b'.");
+      speak("Cadena escrita incorrectamente, la palabra solo debe contener las letras 'a' y 'b'.")
     }
   });
 
@@ -129,9 +130,11 @@ function check(){
   function check_acceptance_status(node) {
     if(node.data.category=="accept") {
       alert("Cadena aceptada");
+      speak("Cadena aceptada");
       return true;
     } else {
       alert("Cadena rechazada");
+      speak("Cadena rechazada");
       return false;
     }
   
@@ -143,3 +146,13 @@ function check(){
 
 } 
 
+function speak(text) {
+  if ('speechSynthesis' in window) {
+    const speech = new SpeechSynthesisUtterance();
+    speech.text = text;
+    speech.lang = 'es-ES';
+    speechSynthesis.speak(speech);
+  } else {
+    console.log("La síntesis de voz no es compatible con este navegador.");
+  }
+}
