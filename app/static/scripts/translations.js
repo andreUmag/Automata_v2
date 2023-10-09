@@ -46,3 +46,22 @@ document.querySelectorAll(".nav_link--inside").forEach((link) => {
 });
 
 changeLanguage("espanol");
+
+const supertitulo = document.querySelector(".supertitulo h2");
+
+document.querySelectorAll('[data-translate]').forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const selectedLanguage = this.getAttribute('data-translate');
+
+    const translations = {
+      espanol: 'Automata Finito',
+      ingles: 'Finite Automaton',
+    };
+
+    if (translations[selectedLanguage]) {
+      supertitulo.textContent = translations[selectedLanguage];
+    }
+  });
+});
