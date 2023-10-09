@@ -128,19 +128,17 @@ function check(){
   }
   
   function check_acceptance_status(node) {
-    if(node.data.category=="accept") {
-      alert("Cadena aceptada");
-      speak("Cadena aceptada");
-      return true;
-    } else {
-      alert("Cadena rechazada");
-      speak("Cadena rechazada");
-      return false;
+    if (text.match(/^[abAB]+$/)) {
+        if(node.data.category=="accept") {
+        alert("Cadena aceptada");
+        speak("Cadena aceptada");
+        return true;
+        } else {
+        alert("Cadena rechazada");
+        speak("Cadena rechazada");
+        return false;
+        }
     }
-  
-  
-  
-  
   }
   
 
