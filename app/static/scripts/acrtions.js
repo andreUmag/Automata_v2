@@ -1,4 +1,4 @@
-// seccion para el funcionamiento del menu lateral
+// Section for the operation of the side menu
 let listelement = document.querySelectorAll(".list_button--click");
 
 listelement.forEach((listelement) => {
@@ -15,13 +15,13 @@ listelement.forEach((listelement) => {
   });
 });
 
-// seccion para el funcionamiento del slider de velocidad
+// Section for the speed slider functionality
 const slideValue = document.querySelector("span");
 const inputSlider = document.querySelector("input");
-var valorInput = ""; //variable que registra el valor de la velocidad
+var valorInput = ""; // Variable that records the speed value
 
-function transformarValorInput(value) {
-  // Convierte el valor de 10 a 100 a un valor entre 1 y 2
+function transformValorInput(value) {
+  // Converts the value from 10 to 100 to a value between 1 and 2
   return (1 + (value - 10) / 90)*1000;
 }
 inputSlider.oninput = () => {
@@ -36,7 +36,7 @@ inputSlider.onblur = () => {
 };
 
 
-// seccion para elfuncionamiento de la entrada de palabras y mostrar las palabras en la lista del menu
+// Section for the operation of word input and displaying words in the menu list
 document.addEventListener("DOMContentLoaded", function () {
   const inputField = document.getElementById("input-word");
   const addButton = document.getElementById("add-word-button");
@@ -131,18 +131,16 @@ function check(){
     if (text.match(/^[abAB]+$/)) {
         if(node.data.category=="accept") {
         alert("Cadena aceptada");
-        speak("Cadena aceptada");
+        speak("La palabra ha sido aceptada");
         return true;
         } else {
         alert("Cadena rechazada");
-        speak("Cadena rechazada");
+        speak("La palabra ha sido rechazada");
         return false;
         }
     }
   }
-  
-
-} 
+}
 
 function speak(text) {
   if ('speechSynthesis' in window) {
