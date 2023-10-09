@@ -21,7 +21,7 @@ const inputSlider = document.querySelector("input");
 var valorInput = "";
 
 function transformValorInput(value) {
-  return (1 + (value - 10) / 90)*1000;
+  result = (value - 10) / 90 * 1750 + 250
 }
 inputSlider.oninput = () => {
   let value = inputSlider.value;
