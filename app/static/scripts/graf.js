@@ -1,6 +1,5 @@
 function init() {
       var $ = go.GraphObject.make;  // for conciseness in defining templates
-
       // some constants that will be reused within templates
       var roundedRectangleParams = {
         parameter1: 2,  // set the rounded corner
@@ -201,8 +200,7 @@ function init() {
       new go.Binding("text").makeTwoWay())
   ));
 
-      // clicking the button inserts a new node to the right of the selected node,
-      // and adds a link to that new node
+      // clicking the button inserts a new node to the right of the selected node, and adds a link to that new node
       function addNodeAndLink(e, obj) {
         var adornment = obj.part;
         var diagram = e.diagram;
@@ -275,10 +273,8 @@ function init() {
               new go.Binding("text").makeTwoWay())
           )
         );
-
       // read in the JSON data from the "mySavedModel" element
       load();
-
     }
 
     // Show the diagram's model in JSON format
@@ -291,5 +287,3 @@ function init() {
     }
 
     window.addEventListener('DOMContentLoaded', init);
-
-    

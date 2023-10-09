@@ -18,10 +18,9 @@ listelement.forEach((listelement) => {
 // Section for the speed slider functionality
 const slideValue = document.querySelector("span");
 const inputSlider = document.querySelector("input");
-var valorInput = ""; // Variable that records the speed value
+var valorInput = "";
 
 function transformValorInput(value) {
-  // Converts the value from 10 to 100 to a value between 1 and 2
   return (1 + (value - 10) / 90)*1000;
 }
 inputSlider.oninput = () => {
@@ -44,9 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   addButton.addEventListener("click", function (event) {
     event.preventDefault();
-
     const inputValue = inputField.value.trim();
-
     const regex = /^[abAB]+$/;
 
     if (regex.test(inputValue)) {
@@ -58,16 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       wordList.insertBefore(listItem, wordList.firstChild);
-
       inputField.value = "";
     } else {
       alert("La palabra solo debe contener las letras 'a' y 'b'.");
       speak("Cadena escrita incorrectamente, la palabra solo debe contener las letras 'a' y 'b'.")
     }
   });
-
-
-
 });
 
 
@@ -76,6 +69,7 @@ function check(){
   var text = document.getElementById("input-word").value;
     unpaint();
     check_word(text, 0, -1);
+
     function check_word(text, index, keynode) {
     node= myDiagram.findNodeForKey(keynode);
     window.setTimeout(function () {
@@ -96,10 +90,7 @@ function check(){
           check_acceptance_status(node);
         }
       }, 500);
-  
     },500);
-  
-  
   }
   
   function unpaint() {
