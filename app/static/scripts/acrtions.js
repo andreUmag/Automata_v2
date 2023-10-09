@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       inputField.value = "";
     } else {
       alert("La palabra solo debe contener las letras 'a' y 'b'.");
-      speak("Cadena escrita incorrectamente, la palabra solo debe contener las letras 'a' y 'b'.")
+      speak("la Cadena esta escrita incorrectamente, la palabra solo debe contener las letras 'a' y 'be'.")
     }
   });
 });
