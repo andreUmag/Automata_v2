@@ -15,23 +15,6 @@ listelement.forEach((listelement) => {
   });
 });
 
-  // // Section for the speed slider functionality
-  // const slideValue = document.querySelector("span");
-  // const inputSlider = document.querySelector("input");
-
-// inputSlider.oninput = () => {
-//   let value = inputSlider.value;
-//   slideValue.textContent = value;
-//   slideValue.style.left = value + "%";
-//   slideValue.classList.add("show");
-//   let speed = transformValorInput(value);
-  
-  
-// };
-inputSlider.onblur = () => {
-  slideValue.classList.remove("show");
-};
-
 
 // Section for the operation of word input and displaying words in the menu list
 document.addEventListener("DOMContentLoaded", function () {
@@ -136,7 +119,6 @@ function transformValorInput(velocity) {
   }else{
     return 2000;
   }
-  
 }
 
 function paint_node(node) {
