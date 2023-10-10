@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (check_text_with_regex(text) && text != "") {
       const listItem = document.createElement("li");
-      listItem.textContent = inputValue;
+      listItem.textContent = text;
 
       if (wordList.children.length >= 5) {
         wordList.removeChild(wordList.lastChild);
