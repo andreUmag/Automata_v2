@@ -29,15 +29,9 @@
     <div class="container">
       <nav class="nav">
         <ul class="list">
-          
-          <li class="list_item ">
-            <div class="list_button ">
-              <p
-                href="#"
-                class="nav_link"
-                style="color: white"
-                >b(aa U b)^4</p
-              >
+          <li class="list_item">
+            <div class="list_button">
+              <p href="#" class="nav_link" style="color: white">b(aa U b)^4</p>
             </div>
           </li>
 
@@ -127,8 +121,12 @@
 
       <div class="content">
         <div class="title">
-          <a href="https://drive.google.com/file/d/1qm3zBdmIJjnBUVEI1nZ7kPrke4Lm-57G/view?usp=sharing" 
-          target="_blank" class="supertitulo"><h2>Automata Finito</h2></a>
+          <a
+            href="https://drive.google.com/file/d/1qm3zBdmIJjnBUVEI1nZ7kPrke4Lm-57G/view?usp=sharing"
+            target="_blank"
+            class="supertitulo"
+            ><h2>Automata Finito</h2></a
+          >
         </div>
 
         <div class="graf_content">
@@ -139,7 +137,14 @@
               </div>
               <div class="field">
                 <div class="value left">0.25</div>
-                <input type="range" min="1" max="5" value="3" steps="1" id="inputSlider"/>
+                <input
+                  type="range"
+                  min="1"
+                  max="5"
+                  value="3"
+                  steps="1"
+                  id="inputSlider"
+                />
                 <div class="value right">2.0</div>
               </div>
             </div>
@@ -152,8 +157,13 @@
               <input type="text" id="input-word" required />
               <label data-translate="palabra">Palabra</label>
             </div>
-            <div class="buttondiv" >
-              <button onclick="check()" type="submit" id="add-word-button" class="button" >
+            <div class="buttondiv">
+              <button
+                onclick="check()"
+                type="submit"
+                id="add-word-button"
+                class="button"
+              >
                 <img
                   src="{{ url_for('static', filename='assets/bx-send.svg') }}"
                   class="send-word"
